@@ -9,6 +9,7 @@ connect(ConString);
 const item = new Schema({
 	id: String,
 	name: String,
+	discount: Float32Array,
 	count: Number,
 	price: Float64Array,
 });
