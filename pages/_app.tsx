@@ -8,10 +8,11 @@ import Layout from '../layout/index';
 //
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
+	const store = useStore(pageProps.initialReduxState);
+  return (<Provider store={store}>
     <Layout>
       <Component {...pageProps} />
-    </Layout>
+    </Layout></Provider>
   );
 }
 
